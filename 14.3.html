@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let arr1=[3, 5, 1, 8, -3, 7, 8];
+    let max=tim(arr1);
+    alert(max);
+    let arr2=[7, 12, 6, 9, 20, 56, 89];
+    let max1=tim(arr2);
+    alert(max1);
+    let arr3=[];
+    let min=tim1(arr3);
+    alert(min);
+    let arr4=[1, 1, 1, 1, 1, 1];
+    let check=tim1(arr4);
+    alert("Tat ca cac phan tu trung nhau " + check + " voi " + arr4[0] );
+    function tim(arr){
+        let max=arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+                arr[i] = max;
+            }
+        }
+        return max;
+    }
+    function tim1(arr){
+        if (arr.length===0){
+            return arr[0];
+        }
+            let check=true;
+        for (let i = 0; i <arr.length-1;i++){
+            if (arr[i]!==arr[i+1]){
+                check=false;
+                break;
+            }
+        }
+        if (check){
+            return check;
+        }
+        let min=arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+                arr[i] = min;
+            }
+        }
+        return min;
+    }
+
+
+</script>
